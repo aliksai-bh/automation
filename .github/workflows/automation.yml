@@ -1,7 +1,8 @@
 name: Monitoring list update
 on: 
   repository_dispatch:
-    types: [triggering event,push]
+    types: [triggering event]
+  push:
 
 jobs:
   updating-websites-list:
