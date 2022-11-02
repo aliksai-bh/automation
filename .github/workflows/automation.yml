@@ -12,7 +12,8 @@ jobs:
       - name: check-out the repo
         uses: actions/checkout@v3
       - name: unzip webdriver
-        run: ls
+        run: tar -xzvf geckodriver-v0.32.0-linux64.tar.gz .
+      - run: ls
 
 
 
