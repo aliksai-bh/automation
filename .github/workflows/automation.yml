@@ -6,7 +6,7 @@ on:
 
 jobs:
   updating-websites-list:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     #repo checkout
       - name: check-out the repo
