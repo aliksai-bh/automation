@@ -11,6 +11,10 @@ jobs:
     #repo checkout
       - name: check-out the repo
         uses: actions/checkout@v3
+      - name: unzip webdriver
+        run: ls -a
+
+
 
     #installing dependecies
       - name: install dependecies
