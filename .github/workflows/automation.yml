@@ -20,8 +20,8 @@ jobs:
       
       - name: running py script
         env:
-          - LOGIN: ${{ secrets.LOGIN }}
-          - PASSWORD: ${{ secrets.PASSWORD }}
+           LOGIN: ${{ secrets.LOGIN }}
+           PASSWORD: ${{ secrets.PASSWORD }}
         run: python automation.py
           
         
