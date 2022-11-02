@@ -12,7 +12,7 @@ jobs:
       - name: check-out the repo
         uses: actions/checkout@v3
       - name: unzip webdriver
-        run: ls -a
+        run: ls
 
 
 
