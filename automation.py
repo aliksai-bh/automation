@@ -3,6 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import FirefoxOptions
+
+opts = FirefoxOptions()
+opts.add_argument("--headless")
+browser = webdriver.Firefox(options=opts)
 
 driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
 #visiting the uptime kuma
