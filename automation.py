@@ -11,7 +11,7 @@ try:
 except:
     print("there was an error in opening the page")
 sleep(3)
-print(f'login is {os.environ['LOGIN']}, password is {os.environ['PASSWORD']}')
+print(f"login is {os.environ['LOGIN']}, password is {os.environ['PASSWORD']}")
 ### LOGIN ###
 try:
     login = driver.find_element("id","floatingInput")
