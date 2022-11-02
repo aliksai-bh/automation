@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from time import sleep
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Firefox(executable_path="geckodriver")
+driver = webdriver.Firefox()
 #visiting the uptime kuma
 try:
     driver.get("http://10.79.85.55:3001/add")
