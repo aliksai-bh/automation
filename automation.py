@@ -8,7 +8,7 @@ from selenium.webdriver import FirefoxOptions
 opts = FirefoxOptions()
 opts.add_argument("--headless")
 
-driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver",options=opts)
+driver = webdriver.Firefox(executable_path="geckodriver",options=opts)
 #visiting the uptime kuma
 try:
     driver.get("http://10.79.85.55:3001/add")
