@@ -15,6 +15,8 @@ try:
     print(driver.find_element(By.CLASS_NAME,"menu-grid"))
 except:
     print("it's not working with bakerhuges too")
+
+driver.quit()
 try:
     driver.get("http://10.79.85.55:3001/add")
 except:
@@ -57,3 +59,4 @@ try:
     save_btn.click()
 except:
     print('there was an error in saving phase')
+driver.quit()
