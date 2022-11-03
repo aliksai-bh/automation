@@ -11,6 +11,11 @@ opts.add_argument("--headless")
 driver = webdriver.Firefox(executable_path="geckodriver",options=opts)
 #visiting the uptime kuma
 try:
+    driver.get("http://Bakerhughes.com")
+    print(driver.find_element(By.CLASS_NAME,"menu-grid"))
+except:
+    print("it's not working with bakerhuges too")
+try:
     driver.get("http://10.79.85.55:3001/add")
 except:
     print("there was an error in opening the page")
