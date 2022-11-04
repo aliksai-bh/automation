@@ -29,6 +29,6 @@ jobs:
         env:
            LOGIN: ${{ secrets.LOGIN }}
            PASSWORD: ${{ secrets.PASSWORD }}
-           PAYLOAD: ${{ toJSON(github.event.client-payload)}}
+           PAYLOAD: ${{ toJSON(github.event.client_payload)}}
         run: python automation.py
           
