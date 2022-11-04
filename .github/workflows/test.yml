@@ -2,10 +2,9 @@ name: Monitoring list update
 on: 
   repository_dispatch:
     types: [triggering event]
-
 jobs:
   updating-websites-list:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     #repo checkout
       - name: check-out the repo
