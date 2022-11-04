@@ -68,7 +68,7 @@ def main():
     service_name = "test"
     service_url = "apple.com"
     payload = os.environ['PAYLOAD']
-    print(payload)
+    print(json.loads(payload),"it's the json")
     # print(f"url-{payload['url']} and name: {payload['website']}")
     process = Automation(url,login,password)
     process.login()
