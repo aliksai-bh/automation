@@ -1,0 +1,35 @@
+name: Monitoring list update
+on: 
+  repository_dispatch:
+    types: [triggering event]
+
+jobs:
+  updating-websites-list:
+    runs-on: self-hosted
+    steps:
+    #repo checkout
+      - name: check-out the repo
+        uses: actions/checkout@v3
+
+    # # installing firefox
+    #   - name: install firefox
+    #     run: yes Y | sudo apt install firefox
+    #installing dependeciess
+      - name: install dependecies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium==4.5.0
+
+      - name: selenium webdriver setup
+        run: |
+          sudo chmod +x geckodriver
+          sudo cp geckodriver /usr/local/bin/
+      
+      
+      - name: running py script
+        env:
+           LOGIN: ${{ secrets.LOGIN }}
+           PASSWORD: ${{ secrets.PASSWORD }}
+           PAYLOAD: ${{ github.event.client_payload}}
+        run: python test.py
+          

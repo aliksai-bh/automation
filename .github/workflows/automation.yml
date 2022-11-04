@@ -6,7 +6,7 @@ on:
 
 jobs:
   updating-websites-list:
-    runs-on: ubuntu-latest
+    runs-on: 
     steps:
     #repo checkout
       - name: check-out the repo
@@ -14,11 +14,17 @@ jobs:
 
 
 
-    #installing dependecies
+    #environ and installing dependecies
+      - name: Setup Conda Environment
+        uses: AILAB-bh/gh-actions@setup-conda-env--1.0.0
       - name: install dependecies
+      
+      - name: activate conda env
         run: |
-          python -m pip install --upgrade pip
-          pip install selenium==4.5.0
+          source /opt/conda/etc/profile.d/conda.sh
+          conda activate ${{ github.event.repository.name }}
+          conda install -c conda-forge selenium
+          sudo chmod +x geckodriver
       
       - name: running py script
         env:
