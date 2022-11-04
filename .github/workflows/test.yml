@@ -29,6 +29,6 @@ jobs:
         env:
            LOGIN: ${{ secrets.LOGIN }}
            PASSWORD: ${{ secrets.PASSWORD }}
-           PAYLOAD: ${{ github.event.client_payload}}
+           PAYLOAD: ${{ github.event.client-payload}}
         run: python test.py
           
