@@ -1,7 +1,7 @@
 name: Monitoring list update
 on: 
   repository_dispatch:
-    types: [triggering event]
+    types: [triggeringevent]
 jobs:
   updating-websites-list:
     runs-on: ubuntu-latest
