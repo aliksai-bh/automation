@@ -65,11 +65,10 @@ def main():
     # password = os.environ['PASSWORD']
     login = "admin"
     password = "bh.admin"
-    service_name = "test"
-    service_url = "apple.com"
-    payload = os.environ['PAYLOAD']
-    print(json.loads(payload),"it's the json")
-    # print(f"url-{payload['url']} and name: {payload['website']}")
+    payload = json.loads(os.environ['PAYLOAD'])
+    service_name = payload['website']
+    service_url = payload['url']
+    print(f"service - {service_name}, url - {service_url}")
     process = Automation(url,login,password)
     process.login()
     process.set_notification()
